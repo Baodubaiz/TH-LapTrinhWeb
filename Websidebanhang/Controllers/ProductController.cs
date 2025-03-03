@@ -54,11 +54,15 @@ public class ProductController : Controller
         }
         return "/img/" + image.FileName; // Trả về đường dẫn tương đối
     }
+
+
     public IActionResult Index()
     {
         var products = _productRepository.GetAll();
         return View(products);
     }
+
+
     public IActionResult Display(int id)
     {
         var product = _productRepository.GetById(id);
@@ -68,6 +72,8 @@ public class ProductController : Controller
         }
         return View(product);
     }
+
+
     public IActionResult Update(int id)
     {
         var product = _productRepository.GetById(id);
@@ -75,8 +81,13 @@ public class ProductController : Controller
         {
             return NotFound();
         }
+
+        // Load danh mục để dropdown không bị trống
+        ViewBag.Categories = new SelectList(_categoryRepository.GetAllCategories(), "Id", "Name", product.CategoryId);
+
         return View(product);
     }
+
     [HttpPost]
     public IActionResult Update(Product product)
     {
@@ -85,8 +96,13 @@ public class ProductController : Controller
             _productRepository.Update(product);
             return RedirectToAction("Index");
         }
+
+        // Nếu có lỗi validation, nạp lại danh mục
+        ViewBag.Categories = new SelectList(_categoryRepository.GetAllCategories(), "Id", "Name", product.CategoryId);
+
         return View(product);
     }
+
     public IActionResult Delete(int id)
     {
         var product = _productRepository.GetById(id);
