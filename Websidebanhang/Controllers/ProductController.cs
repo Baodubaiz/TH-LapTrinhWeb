@@ -1,92 +1,105 @@
-﻿namespace Websidebanhang.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Websidebanhang.Repositories;
+using Websidebanhang.Models; // Thay thế bằng namespace thực tế của bạn
+using Websidebanhang.Repositories; // Thay thế bằng namespace thực tế của bạn
+public class ProductController : Controller
 {
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.AspNetCore.Mvc.Rendering;
-    using Websidebanhang.Models; 
-    using Websidebanhang.Repositories;
-     public class ProductController : Controller
-
+    private readonly IProductRepository _productRepository;
+    private readonly ICategoryRepository _categoryRepository;
+    public ProductController(IProductRepository productRepository,
+    ICategoryRepository categoryRepository)
     {
-        private readonly IProductRepository _productRepository;
-        private readonly ICategoryRepository _categoryRepository;
-        public ProductController(IProductRepository productRepository,
-        ICategoryRepository categoryRepository)
-        {
-            _productRepository = productRepository;
-            _categoryRepository = categoryRepository;
-        }
+        _productRepository = productRepository;
+        _categoryRepository = categoryRepository;
+    }
 
-        public IActionResult Add()
+    public IActionResult Add()
+    {
+        var categories = _categoryRepository.GetAllCategories();
+        ViewBag.Categories = new SelectList(categories, "Id", "Name");
+        return View();
+    }
+    [HttpPost]
+    public async Task<IActionResult> Add(Product product, IFormFile imageUrl, List<IFormFile> imageUrls)
+    {
+        if (ModelState.IsValid)
         {
-            var categories = _categoryRepository.GetAllCategories();
-            ViewBag.Categories = new SelectList(categories, "Id", "Name");
-            return View();
-        }
-        [HttpPost]
-        public IActionResult Add(Product product)
-        {
-            if (ModelState.IsValid)
+            if (imageUrl != null)
             {
-                _productRepository.Add(product);
-                return RedirectToAction("Index"); // Chuyển hướng tới trang danh sách sản phẩm
+                // Lưu hình ảnh đại diện
+                product.ImageUrl = await SaveImage(imageUrl);
             }
-            return View(product);
-        }
-        // Các actions khác như Display, Update, Delete
-        // Display a list of products
-        public IActionResult Index()
-        {
-            var products = _productRepository.GetAll();
-            return View(products);
-        }
-
-        // Display a single product
-        public IActionResult Display(int id)
-        {
-            var product = _productRepository.GetById(id);
-            if (product == null)
+            if (imageUrls != null)
             {
-                return NotFound();
+                product.ImageUrls = new List<string>();
+                foreach (var file in imageUrls)
+                {
+                    // Lưu các hình ảnh khác
+                    product.ImageUrls.Add(await SaveImage(file));
+                }
             }
-            return View(product);
-        }
-        // Show the product update form
-        public IActionResult Update(int id)
-        {
-            var product = _productRepository.GetById(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-            return View(product);
-        }
-        // Process the product update
-        [HttpPost]
-        public IActionResult Update(Product product)
-        {
-            if (ModelState.IsValid)
-            {
-                _productRepository.Update(product);
-                return RedirectToAction("Index");
-            }
-            return View(product);
-        }
-        // Show the product delete confirmation
-        public IActionResult Delete(int id)
-        {
-            var product = _productRepository.GetById(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-            return View(product);
-        }
-        // Process the product deletion
-        [HttpPost, ActionName("DeleteConfirmed")]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            _productRepository.Delete(id);
+            _productRepository.Add(product);
             return RedirectToAction("Index");
         }
+        return View(product);
+    }
+    private async Task<string> SaveImage(IFormFile image)
+    {
+        // Thay đổi đường dẫn theo cấu hình của bạn
+        var savePath = Path.Combine("wwwroot/img", image.FileName);
+        using (var fileStream = new FileStream(savePath, FileMode.Create))
+        {
+            await image.CopyToAsync(fileStream);
+        }
+        return "/img/" + image.FileName; // Trả về đường dẫn tương đối
+    }
+    public IActionResult Index()
+    {
+        var products = _productRepository.GetAll();
+        return View(products);
+    }
+    public IActionResult Display(int id)
+    {
+        var product = _productRepository.GetById(id);
+        if (product == null)
+        {
+            return NotFound();
+        }
+        return View(product);
+    }
+    public IActionResult Update(int id)
+    {
+        var product = _productRepository.GetById(id);
+        if (product == null)
+        {
+            return NotFound();
+        }
+        return View(product);
+    }
+    [HttpPost]
+    public IActionResult Update(Product product)
+    {
+        if (ModelState.IsValid)
+        {
+            _productRepository.Update(product);
+            return RedirectToAction("Index");
+        }
+        return View(product);
+    }
+    public IActionResult Delete(int id)
+    {
+        var product = _productRepository.GetById(id);
+        if (product == null)
+        {
+            return NotFound();
+        }
+        return View(product);
+    }
+    [HttpPost, ActionName("DeleteConfirmed")]
+    public IActionResult DeleteConfirmed(int id)
+    {
+        _productRepository.Delete(id);
+        return RedirectToAction("Index");
     }
 }

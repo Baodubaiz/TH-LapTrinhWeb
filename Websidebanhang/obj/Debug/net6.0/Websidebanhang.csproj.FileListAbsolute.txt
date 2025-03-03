@@ -28,3 +28,4 @@ M:\bao\Websidebanhang\Websidebanhang\obj\Debug\net6.0\refint\Websidebanhang.dll
 M:\bao\Websidebanhang\Websidebanhang\obj\Debug\net6.0\Websidebanhang.pdb
 M:\bao\Websidebanhang\Websidebanhang\obj\Debug\net6.0\Websidebanhang.genruntimeconfig.cache
 M:\bao\Websidebanhang\Websidebanhang\obj\Debug\net6.0\ref\Websidebanhang.dll
+M:\bao\Websidebanhang\Websidebanhang\obj\Debug\net6.0\Websidebanhang.sourcelink.json

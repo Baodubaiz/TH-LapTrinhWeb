@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "baWtvCYfdMNE5t60sbVPXnTYAWFoR3ptAZR73Qk47Qs=",
+  "Hash": "1GA2cGx/Td5GzDdfDEq1KwjhzoTNXdlSTAPokkz+nnI=",
   "Source": "Websidebanhang",
   "BasePath": "_content/Websidebanhang",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "M:\\bao\\Websidebanhang\\Websidebanhang\\wwwroot\\img\\tải xuống (1).jpg",
+      "SourceId": "Websidebanhang",
+      "SourceType": "Discovered",
+      "ContentRoot": "M:\\bao\\Websidebanhang\\Websidebanhang\\wwwroot\\",
+      "BasePath": "_content/Websidebanhang",
+      "RelativePath": "img/tải xuống (1).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\tải xuống (1).jpg"
     },
     {
       "Identity": "M:\\bao\\Websidebanhang\\Websidebanhang\\wwwroot\\js\\site.js",

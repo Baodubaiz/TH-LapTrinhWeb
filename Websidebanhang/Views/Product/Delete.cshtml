@@ -5,6 +5,7 @@
     <h4>Price: @Model.Price</h4>
     <h4>Description: @Model.Description</h4>
 </div>
+<a asp-action="Index">Back to List</a>
 <form asp-action="DeleteConfirmed" method="post">
     <input type="hidden" asp-for="Id" />
     <input type="submit" value="Delete" class="btn btn-danger" /> |
