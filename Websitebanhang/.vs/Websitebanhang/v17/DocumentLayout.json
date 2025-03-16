@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Test web\\Websitebanhang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1088D383-5F32-4349-B88F-6AECB82A494C}|Websitebanhang\\Websitebanhang.csproj|e:\\test web\\websitebanhang\\websitebanhang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1088D383-5F32-4349-B88F-6AECB82A494C}|Websitebanhang\\Websitebanhang.csproj|solutionrelative:websitebanhang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1088D383-5F32-4349-B88F-6AECB82A494C}|Websitebanhang\\Websitebanhang.csproj|e:\\test web\\websitebanhang\\websitebanhang\\repositories\\efcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1088D383-5F32-4349-B88F-6AECB82A494C}|Websitebanhang\\Websitebanhang.csproj|solutionrelative:websitebanhang\\repositories\\efcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1088D383-5F32-4349-B88F-6AECB82A494C}|Websitebanhang\\Websitebanhang.csproj|e:\\test web\\websitebanhang\\websitebanhang\\repositories\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1088D383-5F32-4349-B88F-6AECB82A494C}|Websitebanhang\\Websitebanhang.csproj|solutionrelative:websitebanhang\\repositories\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1088D383-5F32-4349-B88F-6AECB82A494C}|Websitebanhang\\Websitebanhang.csproj|e:\\test web\\websitebanhang\\websitebanhang\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1088D383-5F32-4349-B88F-6AECB82A494C}|Websitebanhang\\Websitebanhang.csproj|solutionrelative:websitebanhang\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1088D383-5F32-4349-B88F-6AECB82A494C}|Websitebanhang\\Websitebanhang.csproj|e:\\test web\\websitebanhang\\websitebanhang\\views\\product\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1088D383-5F32-4349-B88F-6AECB82A494C}|Websitebanhang\\Websitebanhang.csproj|solutionrelative:websitebanhang\\views\\product\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1255,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Test web\\Websitebanhang\\Websitebanhang\\Program.cs",
+              "RelativeDocumentMoniker": "Websitebanhang\\Program.cs",
+              "ToolTip": "E:\\Test web\\Websitebanhang\\Websitebanhang\\Program.cs",
+              "RelativeToolTip": "Websitebanhang\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T13:02:35.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EFCategoryRepository.cs",
+              "DocumentMoniker": "E:\\Test web\\Websitebanhang\\Websitebanhang\\Repositories\\EFCategoryRepository.cs",
+              "RelativeDocumentMoniker": "Websitebanhang\\Repositories\\EFCategoryRepository.cs",
+              "ToolTip": "E:\\Test web\\Websitebanhang\\Websitebanhang\\Repositories\\EFCategoryRepository.cs",
+              "RelativeToolTip": "Websitebanhang\\Repositories\\EFCategoryRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T08:52:14.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "E:\\Test web\\Websitebanhang\\Websitebanhang\\Repositories\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "Websitebanhang\\Repositories\\ICategoryRepository.cs",
+              "ToolTip": "E:\\Test web\\Websitebanhang\\Websitebanhang\\Repositories\\ICategoryRepository.cs",
+              "RelativeToolTip": "Websitebanhang\\Repositories\\ICategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T08:52:05.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "E:\\Test web\\Websitebanhang\\Websitebanhang\\Views\\Product\\Add.cshtml",
+              "RelativeDocumentMoniker": "Websitebanhang\\Views\\Product\\Add.cshtml",
+              "ToolTip": "E:\\Test web\\Websitebanhang\\Websitebanhang\\Views\\Product\\Add.cshtml",
+              "RelativeToolTip": "Websitebanhang\\Views\\Product\\Add.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-16T08:49:12.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "E:\\Test web\\Websitebanhang\\Websitebanhang\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Websitebanhang\\Controllers\\ProductController.cs",
+              "ToolTip": "E:\\Test web\\Websitebanhang\\Websitebanhang\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Websitebanhang\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwB8AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T08:45:14.404Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
