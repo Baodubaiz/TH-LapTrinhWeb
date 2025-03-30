@@ -1,0 +1,127 @@
+﻿@using Microsoft.AspNetCore.Http
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Quản trị hệ thống</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true" />
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #343a40, #212529);
+            padding: 15px;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+            .nav-link:hover {
+                color: #f8d210 !important;
+                transition: 0.3s;
+            }
+
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #343a40;
+            padding-top: 20px;
+        }
+
+            .sidebar a {
+                color: white;
+                padding: 10px 15px;
+                display: block;
+                text-decoration: none;
+            }
+
+                .sidebar a:hover {
+                    background-color: #495057;
+                }
+
+        .container {
+            flex: 1;
+            margin-left: 250px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #212529;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+            footer a {
+                color: #f8d210;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+                footer a:hover {
+                    color: #ff9800;
+                    transition: 0.3s;
+                }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/admin">Quản trị hệ thống</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/profile">Tài khoản</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar">
+        <a asp-area="Admin" asp-controller="Products" asp-action="Add">Add</a>
+        <a asp-area="Admin" asp-controller="Products" asp-action="Index">index</a>
+        <a href="/admin/departments">Phòng ban</a>
+        <a href="/admin/salaries">Lương</a>
+        <a href="/admin/reports">Báo cáo</a>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            &copy; 2025 - Quản trị hệ thống
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/admin.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

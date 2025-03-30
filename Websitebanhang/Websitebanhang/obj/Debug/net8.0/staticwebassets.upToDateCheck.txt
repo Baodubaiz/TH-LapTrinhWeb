@@ -1,5 +1,7 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\imgs\7ed0aa22-a531-45c2-88d8-811a2616ec01.png
+wwwroot\imgs\tải xuống.jfif
 wwwroot\imgs\tải xuống.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

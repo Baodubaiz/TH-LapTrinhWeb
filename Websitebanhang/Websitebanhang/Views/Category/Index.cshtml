@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Websitebanhang.Models.Category>
+
+@{
+    ViewData["Title"] = "Danh mục";
+}
+
+<h2 class="fw-bold">Danh mục</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<div class="row">
+    @foreach (var category in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">@category.Name</h5>
+                    
+                    <div class="d-flex gap-2 align-items-center">
+                        <a asp-action="Display" asp-route-id="@category.Id" class="btn btn-primary" style="width: 120px;">Xem chi tiết</a>
+                        <a asp-action="Delete" asp-route-id="@category.Id" class="btn btn-danger" style="width: 80px;">Xóa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<p>
+    <a asp-action="Add" class="btn btn-primary">Thêm danh mục mới</a>
+</p>
+
+@section Scripts {
+    <script>
+        // Có thể thêm script nếu cần
+    </script>
+}
